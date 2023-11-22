@@ -2,7 +2,7 @@
 
 Tired of not knowing where to find the best CompTIA acronym flash cards? Don't want to spend money? Tired of bad GUI littered with ads? 
 
-Then this python script is for you. Acronyms are pulled and parsed directly from source the official CompTIA source.
+Then this python script is for you. Acronyms are pulled and parsed directly from the official CompTIA source.
 
 ## Requires Python 3.12.0
 

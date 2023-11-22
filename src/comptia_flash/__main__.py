@@ -33,6 +33,7 @@ def main(argv: Optional[list[Any]] = None) -> None:
     elif args.comptia_test == "casp":
         data = get_comptia_data(constants.CaspPlus)
     random.shuffle(data)
+    print("\nPress <ENTER> to progress.\n")
     for data_item in data:
         input(f"\n{data_item.acronym}")
         print(data_item.value)
