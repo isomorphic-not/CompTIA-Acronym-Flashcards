@@ -1,0 +1,24 @@
+[project]
+name = "comptia-flash"
+version = "1.0.0"
+readme = "README.md"
+requires-python = ">= 3.12.0"
+keywords = ["comptia", "flashcards", "a+", "net+", "network+", "sec+", "security+", "cysa", "casp"]
+
+authors = [
+  {name = "Andrew Keller", email = "abkgit@gmail.com" }
+]
+
+maintainers = [
+  {name = "Andrew Keller", email = "abkgit@gmail.com" }
+]
+
+[project.scripts]
+
+sample = "comptia_flash:main"
+
+[build-system]
+# These are the assumed default build requirements from pip:
+# https://pip.pypa.io/en/stable/reference/pip/#pep-517-and-518-support
+requires = ["setuptools>=68.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
