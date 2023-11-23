@@ -18,19 +18,14 @@ A+ Core 2
 python -m comptia_flash --comptia-test a2
 ```
 
-Network+
+Casp+
 ```shell
-python -m comptia_flash --comptia-test net
+python -m comptia_flash --comptia-test casp
 ```
 
-Security+
+Cloud+
 ```shell
-python -m comptia_flash --comptia-test sec
-```
-
-Penetration+
-```shell
-python -m comptia_flash --comptia-test pen
+python -m comptia_flash --comptia-test cloud
 ```
 
 CySa+
@@ -38,7 +33,42 @@ CySa+
 python -m comptia_flash --comptia-test cysa
 ```
 
-Casp+
+Data+
 ```shell
-python -m comptia_flash --comptia-test casp
+python -m comptia_flash --comptia-test data
+```
+
+ITF+
+```shell
+python -m comptia_flash --comptia-test itf
+```
+
+Linux+
+```shell
+python -m comptia_flash --comptia-test linux
+```
+
+Network+
+```shell
+python -m comptia_flash --comptia-test net
+```
+
+Penetration+
+```shell
+python -m comptia_flash --comptia-test pen
+```
+
+Project+
+```shell
+python -m comptia_flash --comptia-test project
+```
+
+Security+
+```shell
+python -m comptia_flash --comptia-test sec
+```
+
+Server+
+```shell
+python -m comptia_flash --comptia-test server
 ```

@@ -12,11 +12,17 @@ from comptia_flash.comptia import CompTIAData, get_comptia_data
     [
         constants.APlusOne,
         constants.APlusTwo,
-        constants.NetPlus,
-        constants.SecPlus,
-        constants.PenPlus,
-        constants.CysaPlus,
         constants.CaspPlus,
+        constants.CloudPlus,
+        constants.CysaPlus,
+        constants.DataPlus,
+        constants.ITFPlus,
+        constants.LinuxPlus,
+        constants.NetPlus,
+        constants.PenPlus,
+        constants.ProjectPlus,
+        constants.SecPlus,
+        constants.ServerPlus,
     ],
 )
 def test_get_comptia_data(test_input):
@@ -29,11 +35,17 @@ def test_get_comptia_data(test_input):
     [
         (["--comptia-test", "a1"], constants.APlusOne),
         (["--comptia-test", "a2"], constants.APlusTwo),
-        (["--comptia-test", "net"], constants.NetPlus),
-        (["--comptia-test", "sec"], constants.SecPlus),
-        (["--comptia-test", "pen"], constants.PenPlus),
-        (["--comptia-test", "cysa"], constants.CysaPlus),
         (["--comptia-test", "casp"], constants.CaspPlus),
+        (["--comptia-test", "cloud"], constants.CloudPlus),
+        (["--comptia-test", "cysa"], constants.CysaPlus),
+        (["--comptia-test", "data"], constants.DataPlus),
+        (["--comptia-test", "itf"], constants.ITFPlus),
+        (["--comptia-test", "linux"], constants.LinuxPlus),
+        (["--comptia-test", "net"], constants.NetPlus),
+        (["--comptia-test", "pen"], constants.PenPlus),
+        (["--comptia-test", "project"], constants.ProjectPlus),
+        (["--comptia-test", "sec"], constants.SecPlus),
+        (["--comptia-test", "server"], constants.ServerPlus),
     ],
 )
 @mock.patch("comptia_flash.__main__.get_comptia_data")

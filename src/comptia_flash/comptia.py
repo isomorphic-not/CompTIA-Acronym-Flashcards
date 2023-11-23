@@ -13,8 +13,9 @@ class CompTIAData:
 def get_comptia_data(exam_info: Type) -> list:
     # Request the pdf and use IO to parse the content instead of writing to user system
     response = requests.get(exam_info.url)
-    content = BytesIO(response.content)
+    response.raise_for_status()
 
+    content = BytesIO(response.content)
     read_pdf = PyPDF2.PdfReader(content)
     final_page_num = len(read_pdf.pages)
 
@@ -30,21 +31,20 @@ def get_comptia_data(exam_info: Type) -> list:
     comptia_data_list = []
     for comptia_item in comptia_list:
         for item_2 in comptia_item.lstrip().split("\n"):
-            if item_2:
-                if item_2.count(" "):
-                    acronym, acronym_value = item_2.split(" ", 1)
-                else:
-                    acronym = None
-                    acronym_value = item_2
+            if item_2 and item_2.count(" "):
+                acronym, acronym_value = item_2.split(" ", 1)
+            else:
+                acronym = None
+                acronym_value = item_2
 
-                comptia_data = CompTIAData()
-                if acronym and acronym.isupper():
-                    comptia_data.acronym = acronym
-                    comptia_data.value = acronym_value
-                    comptia_data_list.append(comptia_data)
-                elif acronym and not acronym.isupper():
-                    comptia_data_list[-1].value += acronym + acronym_value
-                else:
-                    comptia_data_list[-1].value += acronym_value
+            comptia_data = CompTIAData()
+            if acronym and acronym.isupper():
+                comptia_data.acronym = acronym
+                comptia_data.value = acronym_value
+                comptia_data_list.append(comptia_data)
+            elif acronym and not acronym.isupper():
+                comptia_data_list[-1].value += acronym + acronym_value
+            else:
+                comptia_data_list[-1].value += acronym_value
     comptia_data_list[-1].value = comptia_data_list[-1].value.replace(acronym_value, "")
     return comptia_data_list
