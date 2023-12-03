@@ -17,3 +17,7 @@ Choose from the following as `<OPTION>`.
 ```shell
 python -m comptia_flash --comptia-test <OPTION>
 ```
+
+Example output:
+
+![flash_example](/src/media/flash_example.png)
