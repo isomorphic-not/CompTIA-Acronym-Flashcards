@@ -4,71 +4,16 @@ Tired of not knowing where to find the best CompTIA acronym flash cards? Don't w
 
 Then this python script is for you. Acronyms are pulled and parsed directly from the official CompTIA source.
 
+Supports A+ Core 1 and 2, Casp+, Cloud+, Cysa+, Data+, ITF+, Linux+, Net+, Pen+, Project+, Sec+, Server+.
+
 ## Requires Python 3.12.0
 
 ### Example Usage
 
-A+ Core 1
-```shell
-python -m comptia_flash --comptia-test a1
-```
+Choose from the following as `<OPTION>`.
 
-A+ Core 2
-```shell
-python -m comptia_flash --comptia-test a2
-```
+`a1`, `a2`, `casp`, `cloud`, `cysa`, `data`, `itf`, `linux`, `net`, `pen`, `project`, `sec`, `server`.
 
-Casp+
 ```shell
-python -m comptia_flash --comptia-test casp
-```
-
-Cloud+
-```shell
-python -m comptia_flash --comptia-test cloud
-```
-
-CySa+
-```shell
-python -m comptia_flash --comptia-test cysa
-```
-
-Data+
-```shell
-python -m comptia_flash --comptia-test data
-```
-
-ITF+
-```shell
-python -m comptia_flash --comptia-test itf
-```
-
-Linux+
-```shell
-python -m comptia_flash --comptia-test linux
-```
-
-Network+
-```shell
-python -m comptia_flash --comptia-test net
-```
-
-Penetration+
-```shell
-python -m comptia_flash --comptia-test pen
-```
-
-Project+
-```shell
-python -m comptia_flash --comptia-test project
-```
-
-Security+
-```shell
-python -m comptia_flash --comptia-test sec
-```
-
-Server+
-```shell
-python -m comptia_flash --comptia-test server
+python -m comptia_flash --comptia-test <OPTION>
 ```
